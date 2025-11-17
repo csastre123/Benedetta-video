@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: black;
+    }
+    video {
+      width: 100%;
+      max-width: 600px;
+      height: auto;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <video id="miVideo" muted>
+    <source src="https://dl.dropboxusercontent.com/scl/fi/vkcylmf1xj8ac6wpgl8f0/Benedetta_1.mp4" type="video/mp4">
+    Tu navegador no soporta el video HTML5.
+  </video>
+
+  <script>
+    const video = document.getElementById("miVideo");
+
+    video.addEventListener("mouseenter", () => {
+      video.play();
+    });
+
+    video.addEventListener("mouseleave", () => {
+      video.pause();
+      video.currentTime = 0;
+    });
+  </script>
+</body>
+</html>
